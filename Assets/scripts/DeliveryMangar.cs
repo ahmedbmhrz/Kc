@@ -22,6 +22,7 @@ public class DeliveryMangar : MonoBehaviour
     private float spawnRecipeTimer;
     private float spawnRecipeTimerMax = 4f;
     private int waitingReciupesMax = 4;
+    private int successfulRecipesAmount;
 
     private void Awake()
     {
@@ -81,6 +82,8 @@ public class DeliveryMangar : MonoBehaviour
                 }
                 if(plateCountsMathchesRecipe)
                 {
+
+                    successfulRecipesAmount++;
                     //player deliver the correct recipe!!
                     waitingRecipeSOList.RemoveAt(i);
 
@@ -101,6 +104,11 @@ public class DeliveryMangar : MonoBehaviour
     public List<RecipeSO> GetWaitingRecipeSOList()
     {
         return waitingRecipeSOList;
+    }
+
+    public int GetSucceessfulRecipeAmount()
+    {
+        return successfulRecipesAmount;
     }
 
 }
