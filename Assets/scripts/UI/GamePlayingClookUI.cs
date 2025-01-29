@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GamePlayingClookUI : MonoBehaviour
-{
+public class GamePlayingClookUI : MonoBehaviour {
     [SerializeField] private Image timerImage;
 
-    private void Update()
-    {
+    private void Update() {
         timerImage.fillAmount = KitchenGameMangar.Instance.GetGamePlayingTimerNormalized();
     }
 
